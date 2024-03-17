@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import rclpy
 from rclpy.node import Node
 
@@ -65,9 +67,7 @@ class Reconstruction(Node):
 
 def main(args=None):
     rclpy.init(args=args)
-    print("i passed")
     reconstruction = Reconstruction()
-    print("huh")
     rclpy.spin(reconstruction)
     reconstruction.destroy_node()
     rclpy.shutdown()
